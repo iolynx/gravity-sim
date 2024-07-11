@@ -2,6 +2,8 @@ import math
 import pygame
 
 
+G = 5.7 * 10**(-1)
+
 class Particle:
     def __init__(self, x, y, xvel, yvel, mass, radius, colour, screen):
         self.x = x
