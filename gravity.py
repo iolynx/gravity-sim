@@ -1,5 +1,6 @@
 import pygame
 import math
+from particle import Particle
 
 pygame.init()
 
@@ -193,7 +194,7 @@ while not crashed:
 
     if mouseReleased and not mousePressed:
         particles.append(Particle(xFirst - cameraX, yFirst - cameraY, (xFirst - x) /
-                         100, (yFirst - y)/100, selectedMass, selectedRad, selectedColor))
+                         100, (yFirst - y)/100, selectedMass, selectedRad, selectedColor, screen))
         mouseReleased = False
 
     # blitting screen to display

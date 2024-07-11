@@ -1,9 +1,9 @@
 import math
 import pygame
-from pygame import screen
+
 
 class Particle:
-    def __init__(self, x, y, xvel, yvel, mass, radius, colour):
+    def __init__(self, x, y, xvel, yvel, mass, radius, colour, screen):
         self.x = x
         self.y = y
         self.xVel = xvel
@@ -11,9 +11,10 @@ class Particle:
         self.radius = radius
         self.colour = colour
         self.mass = mass
+        self.screen = screen
 
     def draw(self):
-        pygame.draw.circle(screen, self.colour,
+        pygame.draw.circle(self.screen, self.colour,
                            (self.x, self.y), self.radius, self.radius)
 
     def drawTrail(self, surface):
